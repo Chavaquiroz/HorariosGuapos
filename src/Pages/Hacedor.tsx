@@ -9,7 +9,7 @@ import { Card } from "@chakra-ui/card";
 import { Box, Button, HStack, Center, Container, Text, Grid, GridItem, Flex, Heading, Input, Spacer, Table, Image,
    Tag, TagLabel, VStack, Wrap, IconButton, Accordion, InputGroup, CloseButton, TagRoot } from '@chakra-ui/react';
 
-import { AddIcon, RepeatIcon } from '@chakra-ui/icons';
+import { AiOutlinePlus, AiOutlineReload } from "react-icons/ai";
 import { LuMoon, LuSun } from 'react-icons/lu';
 import { Fade } from '@chakra-ui/transition';
 import afifImage from '../assets/afifgod.png';
@@ -268,7 +268,7 @@ const Hacedor: FC = () => {
                                 <Tag.EndElement _hover={{
                             color: invertcolor,
                         }}
-                                as={AddIcon}
+                                as={AiOutlinePlus}
                                 onClick={() => {
                                     setSelectedCourses([...selectedCourses, course]);
                                     setSearchInput('');
@@ -298,7 +298,7 @@ const Hacedor: FC = () => {
           borderColor={color}
           borderWidth="1px"
         >
-        <RepeatIcon />
+        <AiOutlineReload />
         Generar
         </Button>
       </Center>
