@@ -30,7 +30,8 @@ export function Login() {
             </Flex>
                 <h1>Horarios Guapos :v<br/><br/></h1>
             <Center>
-            <HStack>
+            <Box overflowX="auto" w="100%">
+                <Box display="inline-flex" gap="6" px="4" minW="max-content">
                 <Card.Root maxW="sm" overflow="hidden">
                     <Image
                         src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -68,7 +69,8 @@ export function Login() {
                     </Card.Footer>
                     </Card.Root>
                      
-            </HStack>
+            </Box>
+            </Box>
             </Center>
             <Box h={5} />
             <Center>

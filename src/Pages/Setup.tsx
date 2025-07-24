@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Spacer, Flex, Center, HStack } from "@chakra-ui/react";
+import { Box, Button, Spacer, Flex, Center } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { RadioCard } from "@chakra-ui/react";
@@ -106,36 +106,42 @@ export function Setup() {
           <RadioCard.Root
             colorPalette="teal"
             variant="subtle"
-            width={800}
+            maxWidth={800}
+            w="100%"
             value={selectedCarrera}
             onValueChange={(details) => setSelectedCarrera(details.value as Carrera)}
           >
             <Center>
               <RadioCard.Label fontSize={20}>¿Qué carrera cursas?</RadioCard.Label>
             </Center>
-            <HStack align="stretch">
-              {carreras.map((item) => (
-                <RadioCard.Item key={item.value} value={item.value}>
-                  <RadioCard.ItemHiddenInput />
-                  <RadioCard.ItemControl>
-                    <RadioCard.ItemText>{item.title}</RadioCard.ItemText>
-                    <RadioCard.ItemIndicator />
-                  </RadioCard.ItemControl>
-                </RadioCard.Item>
-              ))}
-            </HStack>
+            <Box overflowX="auto" w="100%">
+              <Box display="inline-flex" minW="max-content" gap="4">
+                {carreras.map((item) => (
+                  <RadioCard.Item key={item.value} value={item.value}>
+                    <RadioCard.ItemHiddenInput />
+                    <RadioCard.ItemControl>
+                      <RadioCard.ItemText>{item.title}</RadioCard.ItemText>
+                      <RadioCard.ItemIndicator />
+                    </RadioCard.ItemControl>
+                  </RadioCard.Item>
+                ))}
+              </Box>
+            </Box>
           </RadioCard.Root>
         </Center>
 
-        {/* Las otras preguntas siguen igual, aún sin guardar en localStorage */}
         <Center>
-          <RadioCard.Root colorPalette="teal" variant="subtle" width={800} defaultValue="next"
+          <RadioCard.Root colorPalette="teal"
+          variant="subtle"
+          maxWidth={1000}
+          w="100%"
           value={selectedSemestre} onValueChange={(details) => setSelectedSemestre(details.value as Semestre)}>
             <Box h="40px" />
             <Center>
               <RadioCard.Label fontSize={20}>¿Qué semestre vas a cursar?</RadioCard.Label>
             </Center>
-            <HStack align="stretch">
+            <Box overflowX="auto" w="100%">
+              <Box display="inline-flex" minW="max-content" gap="4">
               {semestre.map((item) => (
                 <RadioCard.Item key={item.value} value={item.value}>
                   <RadioCard.ItemHiddenInput />
@@ -145,19 +151,24 @@ export function Setup() {
                   </RadioCard.ItemControl>
                 </RadioCard.Item>
               ))}
-            </HStack>
+            </Box>
+            </Box>
           </RadioCard.Root>
         </Center>
         
         <Center>
-          <RadioCard.Root colorPalette="teal" variant="subtle" width={800} defaultValue="next"
+          <RadioCard.Root colorPalette="teal"
+          variant="subtle"
+          maxWidth={1300}
+          w="100%"
             value={selectedHorario}
             onValueChange={(details) => setSelectedHorario(details.value as Horario)}>
             <Box h="40px" />
             <Center>
               <RadioCard.Label fontSize={20}>¿Alguna preferencia de horario?</RadioCard.Label>
             </Center>
-            <HStack align="stretch">
+            <Box overflowX="auto" w="100%">
+            <Box display="inline-flex" minW="max-content" gap="4">    
               {horario.map((item) => (
                 <RadioCard.Item key={item.value} value={item.value}>
                   <RadioCard.ItemHiddenInput />
@@ -167,19 +178,24 @@ export function Setup() {
                   </RadioCard.ItemControl>
                 </RadioCard.Item>
               ))}
-            </HStack>
+            </Box>
+            </Box>
           </RadioCard.Root>
         </Center>
 
         <Center>
-          <RadioCard.Root colorPalette="teal" variant="subtle" width={800} defaultValue="next"
+          <RadioCard.Root colorPalette="teal"
+          variant="subtle"
+          maxWidth={800}
+          w="100%"
             value={selectedOptimizacion}
             onValueChange={(details) => setSelectedOptimizacion(details.value as Optimizacion)}>
             <Box h="40px" />
             <Center>
               <RadioCard.Label fontSize={20}>¿Qué optimización preferirías?</RadioCard.Label>
             </Center>
-            <HStack align="stretch">
+            <Box overflowX="auto" w="100%">
+  <Box display="inline-flex" minW="max-content" gap="4">
               {optimizacion.map((item) => (
                 <RadioCard.Item key={item.value} value={item.value}>
                   <RadioCard.ItemHiddenInput />
@@ -189,7 +205,8 @@ export function Setup() {
                   </RadioCard.ItemControl>
                 </RadioCard.Item>
               ))}
-            </HStack>
+            </Box>
+            </Box>
           </RadioCard.Root>
         </Center>
         
