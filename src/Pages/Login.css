@@ -1,0 +1,16 @@
+.boton-personalizado {
+  background-color: #534870;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.wrapper {
+  zoom: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}

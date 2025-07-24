@@ -1,0 +1,17 @@
+/* Fuerza modo claro al exportar PDF */
+.force-light-mode {
+  background-color: white !important;
+  color: black !important;
+}
+
+.force-light-mode table,
+.force-light-mode th,
+.force-light-mode td {
+  background-color: white !important;
+  color: black !important;
+}
+
+#tabla-horario {
+  overflow: visible !important;
+  height: auto !important;
+}
